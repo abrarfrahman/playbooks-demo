@@ -5,9 +5,7 @@
 
 Authors: Abrar Rahman, Anish Sundar
 
-Submitted to the AI Safety track for the RDI Agent MOOC Hackathon, Dec 2024
-
-<img src="https://rdi.berkeley.edu/llm-agents-hackathon/assets/img/Berkeley_RDI_Logo.png" alt="Berkeley RDI" title="Berkeley RDI" width="150">
+<img src="https://github.com/matteobettini/vmas-media/raw/main/media/scenarios/football.gif?raw=true" height="200"> <img src="https://pettingzoo.farama.org/_images/mpe_simple_tag.gif" width="200">
 
 ### Value Over Replacement Agent (VORA)
 **Definition:** Measures how much better (or worse) an agent or human performs compared to a baseline "replacement agent."
@@ -58,8 +56,6 @@ Submitted to the AI Safety track for the RDI Agent MOOC Hackathon, Dec 2024
 
 This repository explores the application of Collaborative Intelligence to Multi-Agent Systems (MAS), focusing on misaligned behaviors through the lens of sports analytics. The goal is to understand the interaction dynamics in multi-agent environments and how these interactions can be modeled, trained, and analyzed using Deep Reinforcement Learning (DRL) techniques.
 
-<img src="https://github.com/matteobettini/vmas-media/raw/main/media/scenarios/football.gif?raw=true" height="200"> <img src="https://pettingzoo.farama.org/_images/mpe_simple_tag.gif" width="200">
-
 We specifically focus on a football environment from the VMAS simulator, which is part of the MultiAgentParticleEnvironments (MPE) suite. For those new to the concept, MPE environments are designed to enable simulations of multi-agent systems and allow experimentation with various Multi-Agent Reinforcement Learning (MARL) algorithms.
 
 
@@ -101,3 +97,8 @@ To set up the environment for this notebook, please install the following depend
 !pip3 install av
 !apt-get install python3-opengl
 ```
+
+
+Submitted to the AI Safety track for the RDI Agent MOOC Hackathon, Dec 2024
+
+<img src="https://rdi.berkeley.edu/llm-agents-hackathon/assets/img/Berkeley_RDI_Logo.png" alt="Berkeley RDI" title="Berkeley RDI" width="150">
