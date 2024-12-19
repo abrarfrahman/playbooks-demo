@@ -6,6 +6,7 @@
 Authors: Abrar Rahman, Anish Sundar
 
 Submitted to the AI Safety track for the RDI Agent MOOC Hackathon, Dec 2024
+
 <img src="https://rdi.berkeley.edu/llm-agents-hackathon/assets/img/Berkeley_RDI_Logo.png" alt="Berkeley RDI" title="Berkeley RDI" width="150">
 
 ### Value Over Replacement Agent (VORA)
