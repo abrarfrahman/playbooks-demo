@@ -40,7 +40,7 @@ A novel multi-agent interpretability framework. Sports metaphors offer a powerfu
 | $\text{ERR} = \text{Sum or Number of Errors Corrected}$ |
 
 ### Usage Rate (UR, or “offensive load”)
-**Definition:** Proportion of the team’s workload handled by an agent or human.
+**Definition:** Proportion of the team’s workload handled by an agent or human. Default cost function is the number of tasks attempted.
 
 | **Formula** |
 |-------------|
@@ -67,11 +67,11 @@ This repository explores the application of Collaborative Intelligence to Multi-
 
 ### Enviornment Setup
 
-We use the football environment from VMAS, a vectorized implementation of multi-agent systems that can run on GPUs. This provides a massive speedup compared to the traditional PettingZoo environments, which operate on CPUs. The football simulation is available only on VMAS, but sample code is included to run a simpler PettingZoo environment (e.g., simple_tag_v3) as a proof of concept.
+We use the `football` environment from VMAS, a vectorized implementation of multi-agent systems that can run on GPUs. This provides a massive speedup compared to the traditional PettingZoo environments, which operate on CPUs. The football simulation is available only on VMAS, but sample code is included to run a simpler PettingZoo environment (e.g., `simple_tag_v3`) as a proof of concept.
 
 Key Components:
-- PettingZoo: A framework for multi-agent environments on CPUs.
-- VMAS: A PyTorch-based library for vectorized MPE environments, optimized for GPUs.
+- [PettingZoo](https://pettingzoo.farama.org/index.html): A framework for multi-agent environments on CPUs.
+- [VMAS](https://github.com/proroklab/VectorizedMultiAgentSimulator): A PyTorch-based library for vectorized MPE environments, optimized for GPUs.
 
 ### Algorithmic Approach
 
