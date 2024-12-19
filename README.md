@@ -3,6 +3,8 @@
 Authors: Abrar Rahman, Anish Sundar
 
 [[preprint draft](https://github.com/abrarfrahman/playbooks-demo/blob/main/%5Bsafety-preprint%5D-Playbooks-Collaborative-Intelligence.pdf)]
+![football vmas demo](https://github.com/matteobettini/vmas-media/raw/main/media/scenarios/football.gif?raw=true)
+![simple tag v3 pettingzoo mpe demo](https://pettingzoo.farama.org/_images/mpe_simple_tag.gif)
 
 This repository explores the application of Collaborative Intelligence to Multi-Agent Systems (MAS), focusing on misaligned behaviors through the lens of sports analytics. The goal is to understand the interaction dynamics in multi-agent environments and how these interactions can be modeled, trained, and analyzed using Deep Reinforcement Learning (DRL) techniques.
 
