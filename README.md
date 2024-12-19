@@ -1,20 +1,68 @@
 # Playbooks for Collaborative Intelligence
 ***Investigating Misaligned Behaviors in Multi-Agent Systems Using Sports Analytics***
 
-Authors: Abrar Rahman, Anish Sundar
-
 [preprint](https://github.com/abrarfrahman/playbooks-demo/blob/main/%5Bsafety-preprint%5D-Playbooks-Collaborative-Intelligence.pdf)
 
-<img src="https://github.com/matteobettini/vmas-media/raw/main/media/scenarios/football.gif?raw=true" height="200"> <img src="https://pettingzoo.farama.org/_images/mpe_simple_tag.gif" width="200">
+Authors: Abrar Rahman, Anish Sundar
+
+Submitted to the AI Safety track for the RDI Agent MOOC Hackathon, Dec 2024
+<img src="https://rdi.berkeley.edu/llm-agents-hackathon/assets/img/Berkeley_RDI_Logo.png" alt="Berkeley RDI" title="Berkeley RDI" width="150">
+
+### Value Over Replacement Agent (VORA)
+**Definition:** Measures how much better (or worse) an agent or human performs compared to a baseline "replacement agent."
+
+| **Formula** |
+|-------------|
+| $\text{VORA} = \text{Agent Performance} - \text{Baseline Performance}$ |
+
+### Team Playmaking (TPM, or “assists”)
+**Definition:** Measures how effectively an agent enables downstream success for humans or other agents.
+
+| **Formula** |
+|-------------|
+| $\text{Assists(a)} = \text{Sum or Number of Meaningful Outputs Used Downstream}$ |
+
+### Task Oversights (TO, or “turnovers”)
+**Definition:** Quantifies the frequency and severity of mistakes introduced by an agent or human.
+
+| **Formula** |
+|-------------|
+| $\text{TO} = \text{Sum or Number of Serious Errors Introduced by Agent}$ |
+
+### Error Reduction and Recovery (ERR, or “rebounds”)
+**Definition:** Measures an agent’s ability to recover from or correct errors introduced by others.
+
+| **Formula** |
+|-------------|
+| $\text{ERR} = \text{Sum or Number of Errors Corrected}$ |
+
+### Usage Rate (UR, or “offensive load”)
+**Definition:** Proportion of the team’s workload handled by an agent or human.
+
+| **Formula** |
+|-------------|
+| $\text{UR} = \frac{\text{Tasks Handled by Agent}}{\text{Cost Function}}$ |
+
+***Note:*** UR can be extended to other cost functions, depending on which constraint to optimize for (ex: dollars, throughput ← TPS, latency ← TTFT, user engagement etc)
+
+### Derived Efficiency Metrics
+
+| **Metric**                     | **Common Name**   | **Definition**                                                       | **Formula**                                                                 |
+|---------------------------------|-------------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| **Efficiency-Adjusted Team Playmaking (E-TPM)** | Assist Rate      | Normalizes the assist score based on the agent’s Usage Rate.               | $\text{E-TPM} = \frac{\text{TPM}}{\text{UR}}$                             |
+| **Efficiency-Adjusted Task Oversights (E-TO)** | Turnover Ratio   | Normalizes turnover rates by Usage Rate.                                  | $\text{E-TO} = \frac{\text{TO}}{\text{UR}}$                               |
+| **Efficiency-Adjusted Error Reduction and Recovery (E-ERR)** | Rebound Rate     | Evaluates how effectively an agent corrects errors relative to its Usage Rate. | $\text{E-ERR} = \frac{\text{ERR}}{\text{UR}}$                             |
+
+### Proof of Concept
 
 This repository explores the application of Collaborative Intelligence to Multi-Agent Systems (MAS), focusing on misaligned behaviors through the lens of sports analytics. The goal is to understand the interaction dynamics in multi-agent environments and how these interactions can be modeled, trained, and analyzed using Deep Reinforcement Learning (DRL) techniques.
 
+<img src="https://github.com/matteobettini/vmas-media/raw/main/media/scenarios/football.gif?raw=true" height="200"> <img src="https://pettingzoo.farama.org/_images/mpe_simple_tag.gif" width="200">
+
 We specifically focus on a football environment from the VMAS simulator, which is part of the MultiAgentParticleEnvironments (MPE) suite. For those new to the concept, MPE environments are designed to enable simulations of multi-agent systems and allow experimentation with various Multi-Agent Reinforcement Learning (MARL) algorithms.
 
-See also
-- BenchMARL library: Provides state-of-the-art implementations of MARL algorithms using TorchRL.
 
-## Environment Setup
+### Environment Setup
 
 We use the football environment from VMAS, a vectorized implementation of multi-agent systems that can run on GPUs. This provides a massive speedup compared to the traditional PettingZoo environments, which operate on CPUs. The football simulation is available only on VMAS, but sample code is included to run a simpler PettingZoo environment (e.g., simple_tag_v3) as a proof of concept.
 
@@ -22,7 +70,7 @@ Key Components:
 -	PettingZoo: A framework for multi-agent environments on CPUs.
 - VMAS: A PyTorch-based library for vectorized MPE environments, optimized for GPUs.
 
-## Algorithmic Approach
+### Algorithmic Approach
 
 In this project, we focus on Deep Deterministic Policy Gradient (DDPG), an off-policy actor-critic reinforcement learning algorithm that optimizes a deterministic policy based on gradients from the critic network. For multi-agent systems, we extend this approach to MADDPG (Multi-Agent DDPG), which allows multiple agents to learn in a cooperative-competitive environment.
 
@@ -40,7 +88,7 @@ Notebook Structure
 	5.	Simulation & Metrics: Aggregate simulation data and compute team-level and agent-level metrics, simulating a “box score.”
 	6.	Visualization: Render the environment and visualize the agent’s learned policy, before and after training, if running on a machine with a GUI.
 
-Installation Instructions
+### Installation Instructions
 
 To set up the environment for this notebook, please install the following dependencies:
 
@@ -52,12 +100,3 @@ To set up the environment for this notebook, please install the following depend
 !pip3 install av
 !apt-get install python3-opengl
 ```
-
-Further Reading
-	•	Deep Deterministic Policy Gradients: The original DDPG paper (Lillicrap et al., 2015).
-	•	Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments: The MADDPG paper.
-	•	Reinforcement Learning: An Introduction (Sutton & Barto, 2018): The classic textbook for reinforcement learning.
-
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
