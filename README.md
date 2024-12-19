@@ -7,6 +7,10 @@ Authors: Abrar Rahman, Anish Sundar
 
 <img src="https://github.com/matteobettini/vmas-media/raw/main/media/scenarios/football.gif?raw=true" height="200"> <img src="https://pettingzoo.farama.org/_images/mpe_simple_tag.gif" width="200">
 
+## AI-SAF: The AI Sports Analytics Framework
+
+A novel multi-agent interpretability framework. Sports metaphors offer a powerful lens to interpret chaotic, multi-agent systems where individual roles, team dynamics, and external variables shape outcomes. This project investigates AI safety in multi-agent systems, with a focus on interpretability and alignment challenges. Inspired by how “ball-hog” behavior can harm team success despite impressive individual stats. By studying emergent patterns and coordination trade-offs, this framework aims to improve the reliability and safety of multi-agent AI systems.
+
 ### Value Over Replacement Agent (VORA)
 **Definition:** Measures how much better (or worse) an agent or human performs compared to a baseline "replacement agent."
 
@@ -46,25 +50,27 @@ Authors: Abrar Rahman, Anish Sundar
 
 ### Derived Efficiency Metrics
 
+<img width="288" alt="Screenshot 2024-12-19 at 1 45 54 PM" src="https://github.com/user-attachments/assets/4bff6940-0116-475d-95f2-54e06f05037f" />
+
+[from basketball reference](https://www.basketball-reference.com/leaders/per_career.html)
+
 | **Metric**                     | **Common Name**   | **Definition**                                                       | **Formula**                                                                 |
 |---------------------------------|-------------------|-----------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| **Efficiency-Adjusted Team Playmaking (E-TPM)** | Assist Rate      | Normalizes the assist score based on the agent’s Usage Rate.               | $\text{E-TPM} = \frac{\text{TPM}}{\text{UR}}$                             |
-| **Efficiency-Adjusted Task Oversights (E-TO)** | Turnover Ratio   | Normalizes turnover rates by Usage Rate.                                  | $\text{E-TO} = \frac{\text{TO}}{\text{UR}}$                               |
-| **Efficiency-Adjusted Error Reduction and Recovery (E-ERR)** | Rebound Rate     | Evaluates how effectively an agent corrects errors relative to its Usage Rate. | $\text{E-ERR} = \frac{\text{ERR}}{\text{UR}}$                             |
-
-### Proof of Concept
-
-This repository explores the application of Collaborative Intelligence to Multi-Agent Systems (MAS), focusing on misaligned behaviors through the lens of sports analytics. The goal is to understand the interaction dynamics in multi-agent environments and how these interactions can be modeled, trained, and analyzed using Deep Reinforcement Learning (DRL) techniques.
-
-We specifically focus on a football environment from the VMAS simulator, which is part of the MultiAgentParticleEnvironments (MPE) suite. For those new to the concept, MPE environments are designed to enable simulations of multi-agent systems and allow experimentation with various Multi-Agent Reinforcement Learning (MARL) algorithms.
+| **Efficiency-Adjusted Team Playmaking** | Assist Rate      | Normalizes the assist score based on the agent’s Usage Rate.               | $\text{E-TPM} = \frac{\text{TPM}}{\text{UR}}$                             |
+| **Efficiency-Adjusted Task Oversights** | Turnover Ratio   | Normalizes turnover rates by Usage Rate.                                  | $\text{E-TO} = \frac{\text{TO}}{\text{UR}}$                               |
+| **Efficiency-Adjusted Error Reduction and Recovery** | Rebound Rate     | Evaluates how effectively an agent corrects errors relative to its Usage Rate. | $\text{E-ERR} = \frac{\text{ERR}}{\text{UR}}$                             |
 
 
-### Environment Setup
+## Proof of Concept
+
+This repository explores the application of Collaborative Intelligence to Multi-Agent Systems (MAS), focusing on misaligned behaviors through the lens of sports analytics. The goal is to understand the interaction dynamics in multi-agent environments and how these interactions can be modeled, trained, and analyzed using Deep Reinforcement Learning (DRL) techniques. We specifically focus on a football environment from the VMAS simulator, which is part of the MultiAgentParticleEnvironments (MPE) suite. For those new to the concept, MPE environments are designed to enable simulations of multi-agent systems and allow experimentation with various Multi-Agent Reinforcement Learning (MARL) algorithms.
+
+### Enviornment Setup
 
 We use the football environment from VMAS, a vectorized implementation of multi-agent systems that can run on GPUs. This provides a massive speedup compared to the traditional PettingZoo environments, which operate on CPUs. The football simulation is available only on VMAS, but sample code is included to run a simpler PettingZoo environment (e.g., simple_tag_v3) as a proof of concept.
 
 Key Components:
--	PettingZoo: A framework for multi-agent environments on CPUs.
+- PettingZoo: A framework for multi-agent environments on CPUs.
 - VMAS: A PyTorch-based library for vectorized MPE environments, optimized for GPUs.
 
 ### Algorithmic Approach
@@ -78,12 +84,12 @@ Centralized vs. Decentralized Critics
 - IDDPG: The critic uses only local observations and actions, supporting decentralized training, where each agent operates independently.
 
 Notebook Structure
-	1.	Hyperparameter Setup: Define hyperparameters to control the training environment and agent behavior.
-	2.	Environment Construction: Build the multi-agent environment using TorchRL’s wrapper for either PettingZoo or VMAS.
-	3.	Policy & Critic Networks: Create the actor-critic networks, exploring the trade-offs in parameter sharing and critic centralization.
-	4.	Sampling & Replay Buffer: Set up a replay buffer for storing agent interactions and sampling for training.
-	5.	Simulation & Metrics: Aggregate simulation data and compute team-level and agent-level metrics, simulating a “box score.”
-	6.	Visualization: Render the environment and visualize the agent’s learned policy, before and after training, if running on a machine with a GUI.
+1.	Hyperparameter Setup: Define hyperparameters to control the training environment and agent behavior.
+2.	Environment Construction: Build the multi-agent environment using TorchRL’s wrapper for either PettingZoo or VMAS.
+3.	Policy & Critic Networks: Create the actor-critic networks, exploring the trade-offs in parameter sharing and critic centralization.
+4.	Sampling & Replay Buffer: Set up a replay buffer for storing agent interactions and sampling for training.
+5.	Simulation & Metrics: Aggregate simulation data and compute team-level and agent-level metrics, simulating a “box score.”
+6.	Visualization: Render the environment and visualize the agent’s learned policy, before and after training, if running on a machine with a GUI.
 
 ### Installation Instructions
 
