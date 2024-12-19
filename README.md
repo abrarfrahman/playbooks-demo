@@ -1,8 +1,9 @@
-# Playbooks for Collaborative Intelligence: Proof of Concept
+# Playbooks for Collaborative Intelligence
+***Investigating Misaligned Behaviors in Multi-Agent Systems Using Sports Analytics***
 
 Authors: Abrar Rahman, Anish Sundar
 
-[[preprint draft](https://github.com/abrarfrahman/playbooks-demo/blob/main/%5Bsafety-preprint%5D-Playbooks-Collaborative-Intelligence.pdf)]
+[preprint](https://github.com/abrarfrahman/playbooks-demo/blob/main/%5Bsafety-preprint%5D-Playbooks-Collaborative-Intelligence.pdf)
 
 <img src="https://github.com/matteobettini/vmas-media/raw/main/media/scenarios/football.gif?raw=true" height="200"> <img src="https://pettingzoo.farama.org/_images/mpe_simple_tag.gif" width="200">
 
