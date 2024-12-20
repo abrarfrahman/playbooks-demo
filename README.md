@@ -1,7 +1,8 @@
 # Playbooks for Collaborative Intelligence
 ***Investigating Misaligned Behaviors in Multi-Agent Systems Using Sports Analytics***
 
-[preprint](https://github.com/abrarfrahman/playbooks-demo/blob/main/%5Bsafety-preprint%5D-Playbooks-Collaborative-Intelligence.pdf) | [colab notebook](https://colab.research.google.com/drive/1uzJJUTXbxCMPTJZoFbN4H3h0A1prL83M#scrollTo=Z2wuyS3kWCTf) | [hackathon slides](https://docs.google.com/presentation/d/14_MfNdl4tadnmda-AXMRAt25k4mLgfo4k2YDeYbEhwI/edit?usp=sharing)
+[preprint](https://github.com/abrarfrahman/playbooks-demo/blob/main/%5Bsafety-preprint%5D-Playbooks-Collaborative-Intelligence.pdf) | [colab notebook](https://colab.research.google.com/drive/1uzJJUTXbxCMPTJZoFbN4H3h0A1prL83M#scrollTo=Z2wuyS3kWCTf) | [hackathon slides](https://docs.google.com/presentation/d/1J57zn_vpVaRQ7B5yWqAn4_9LpjvPb0drGMuaYHLetoA/edit?usp=sharing)
+
 
 Authors: Abrar Rahman, Anish Sundar
 
